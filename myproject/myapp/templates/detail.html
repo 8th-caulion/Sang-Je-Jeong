@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<a href = "{% url 'home' %}">홈으로</a>
+<a href = "{% url 'edit' details.id %}">수정하기</a>
+<a href = "{% url 'delete' details.id %}">삭제하기</a>
+
+<hr>
+
+<h3>제목 : {{details.title}}</h3>
+<hr>
+<h5>최종 수정일 : {{details.pub_date}}</h5>
+<hr>
+글내용<br>{{details.body}}
+<hr>
+memo : {{details.memo}}
+<hr>
+catagory : {{details.cata}}
+
+{% endblock %}
